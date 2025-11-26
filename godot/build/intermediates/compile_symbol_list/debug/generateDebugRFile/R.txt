@@ -1,0 +1,6 @@
+int drawable splash 0x0
+int drawable splash_bg_color 0x0
+int drawable splash_drawable 0x0
+int string godot_project_name_string 0x0
+int style GodotAppMainTheme 0x0
+int style GodotAppSplashTheme 0x0

@@ -1,0 +1,6 @@
+{
+  "client_id": "c1754644-7f36-4e40-9ac7-6441601d3866",
+  "redirect_uri": "msalc1754644-7f36-4e40-9ac7-6441601d3866://auth",
+  "authorization_user_agent": "DEFAULT",
+  "account_mode": "SINGLE"
+}

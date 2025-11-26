@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/sti_building"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+
+    <!-- Top gray bar -->
+    <View
+        android:id="@+id/upperwhiteView"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#D9D9D9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- White overlay below gray bar -->
+    <View
+        android:id="@+id/whiteOverlay"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/upperwhiteView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Menu button -->
+    <Button
+        android:id="@+id/threelinesImage"
+        android:background="@drawable/three_lines"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/upperwhiteView" />
+
+    <!-- Login button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:background="@drawable/box"
+        android:fontFamily="@font/robotoslab"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toTopOf="@id/upperwhiteView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Left logo -->
+    <ImageView
+        android:id="@+id/stilogoImage"
+        android:layout_width="89dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sti_logo"
+        app:layout_constraintRight_toLeftOf="@id/logo_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upperwhiteView" />
+
+    <!-- Right text logo -->
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="189dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sti_pathfinder_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upperwhiteView" />
+
+    <!-- ViewPager2 wrapped in FrameLayout for visible border -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="324dp"
+        android:background="@drawable/black_border_box"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@id/whiteOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+    </FrameLayout>
+
+    <!-- Left arrow -->
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <!-- Right arrow -->
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <!-- Centered progress bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Hidden popup menu (initially gone) with 2 buttons -->
+    <LinearLayout
+        android:id="@+id/popupMenu"
+        android:orientation="vertical"
+        android:background="@drawable/white_border_box"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/threelinesImage"
+        app:layout_constraintStart_toStartOf="@id/threelinesImage">
+
+        <Button
+            android:id="@+id/menuButton1"
+            android:background="@drawable/pathfinderdevelopers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/menuButton2"
+            android:background="@drawable/aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

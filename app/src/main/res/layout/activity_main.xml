@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0E0137"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- EXISTING VIEWS (unchanged) -->
+    <ImageView
+        android:id="@+id/stiLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/sti_logo"
+        app:flow_verticalBias="0.50"
+        app:layout_constraintBottom_toTopOf="@id/topView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/navigationPic"
+        android:layout_width="92dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/navigation_image"
+        app:layout_constraintBottom_toTopOf="@id/topView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#281C4B"
+        app:layout_constraintBottom_toTopOf="@id/imageCarousel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stiLogo"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintLeft_toLeftOf="@id/topView"
+        app:layout_constraintRight_toLeftOf="@id/menuIcon"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <Button
+        android:id="@+id/menuIcon"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/menu_icon"
+        android:backgroundTint="@null"
+        android:padding="0dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintLeft_toLeftOf="@id/topView"
+        app:layout_constraintRight_toRightOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageCarousel"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/NavigateNowText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <View
+        android:id="@+id/lowerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#281C4B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/navigateButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/NavigateNowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Navigate Now"
+        android:textColor="#FFDE21"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/navigateButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageCarousel"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <Button
+        android:id="@+id/navigateButton"
+        android:layout_width="142dp"
+        android:layout_height="110dp"
+        android:background="@drawable/navigate_arrow"
+        android:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@id/lowerView"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NavigateNowText"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@id/lowerView"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="@id/lowerView"
+        app:layout_constraintRight_toRightOf="@id/lowerView"
+        app:layout_constraintTop_toTopOf="@id/lowerView"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <Button
+        android:id="@+id/faqButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/faq"
+        app:layout_constraintBottom_toBottomOf="@id/lowerView"
+        app:layout_constraintLeft_toLeftOf="@id/lowerView"
+        app:layout_constraintRight_toRightOf="@id/lowerView"
+        app:layout_constraintTop_toTopOf="@id/lowerView" />
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@id/lowerView"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintLeft_toLeftOf="@id/lowerView"
+        app:layout_constraintRight_toRightOf="@id/lowerView"
+        app:layout_constraintTop_toTopOf="@id/lowerView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

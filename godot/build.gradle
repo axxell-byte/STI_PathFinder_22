@@ -1,0 +1,142 @@
+// Godot Android library module build.gradle
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android' version '1.9.0'
+}
+
+apply from: 'config.gradle'
+
+configurations {
+    devImplementation {}
+}
+
+dependencies {
+    implementation "androidx.fragment:fragment:$versions.fragmentVersion"
+
+    if (rootProject.findProject(":lib")) {
+        implementation project(":lib")
+    } else if (rootProject.findProject(":godot:lib")) {
+        implementation project(":godot:lib")
+    } else {
+        debugImplementation fileTree(dir: 'libs/debug', include: ['*.jar', '*.aar'])
+        devImplementation fileTree(dir: 'libs/dev', include: ['*.jar', '*.aar'])
+        releaseImplementation fileTree(dir: 'libs/release', include: ['*.jar', '*.aar'])
+    }
+
+    String[] remoteDeps = getGodotPluginsRemoteBinaries()
+    if (remoteDeps != null && remoteDeps.length > 0) {
+        for (String dep : remoteDeps) {
+            implementation dep
+        }
+    }
+
+    String[] pluginsBinaries = getGodotPluginsLocalBinaries()
+    if (pluginsBinaries != null && pluginsBinaries.length > 0) {
+        implementation files(pluginsBinaries)
+    }
+}
+
+android {
+    namespace 'com.godot.game'
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+    ndkVersion versions.ndkVersion
+
+    compileOptions {
+        sourceCompatibility versions.javaVersion
+        targetCompatibility versions.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = versions.javaVersion.toString()
+    }
+
+    defaultConfig {
+        aaptOptions {
+            ignoreAssetsPattern "!.svn:!.git:!.gitignore:!.ds_store:!*.scc:<dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"
+        }
+
+        ndk {
+            String[] exportAbiList = getExportEnabledABIs()
+            abiFilters exportAbiList
+        }
+
+        manifestPlaceholders = [godotEditorVersion: getGodotEditorVersion()]
+
+        versionCode getExportVersionCode()
+        versionName getExportVersionName()
+        minSdkVersion getExportMinSdkVersion()
+        targetSdkVersion getExportTargetSdkVersion()
+
+        missingDimensionStrategy 'products', 'template'
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation', 'UnusedResources'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+
+        if (shouldNotStrip()) {
+            doNotStrip '**/*.so'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            if (hasCustomDebugKeystore()) {
+                storeFile new File(getDebugKeystoreFile())
+                storePassword getDebugKeystorePassword()
+                keyAlias getDebugKeyAlias()
+                keyPassword getDebugKeystorePassword()
+            }
+        }
+
+        release {
+            File keystoreFile = new File(getReleaseKeystoreFile())
+            if (keystoreFile.isFile()) {
+                storeFile keystoreFile
+                storePassword getReleaseKeystorePassword()
+                keyAlias getReleaseKeyAlias()
+                keyPassword getReleaseKeystorePassword()
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled shouldZipAlign()
+            signingConfig shouldSign() ? signingConfigs.debug : null
+        }
+        dev {
+            initWith debug
+        }
+        release {
+            zipAlignEnabled shouldZipAlign()
+            signingConfig shouldSign() ? signingConfigs.release : null
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+            aidl.srcDirs = ['aidl']
+            assets.srcDirs = ['assets']
+        }
+        debug.jniLibs.srcDirs = ['libs/debug']
+        dev.jniLibs.srcDirs = ['libs/dev']
+        release.jniLibs.srcDirs = ['libs/release']
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            output.outputFileName = "android_${variant.name}.aar"
+        }
+    }
+}

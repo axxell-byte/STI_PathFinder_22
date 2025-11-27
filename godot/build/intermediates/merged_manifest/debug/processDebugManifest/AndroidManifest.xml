@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.godot.game" >
 
-    <uses-sdk android:minSdkVersion="19" />
+    <uses-sdk android:minSdkVersion="23" />
 
     <uses-feature
         android:glEsVersion="0x00020000"

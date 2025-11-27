@@ -3,7 +3,7 @@
 3    xmlns:tools="http://schemas.android.com/tools"
 4    package="com.godot.game" >
 5
-6    <uses-sdk android:minSdkVersion="19" />
+6    <uses-sdk android:minSdkVersion="23" />
 6-->C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:5-43
 6-->C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:15-41
 7

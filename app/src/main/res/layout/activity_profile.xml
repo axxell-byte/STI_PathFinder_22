@@ -60,10 +60,10 @@
         android:background="@drawable/rounded_box_two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintVertical_bias="0.4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/blackView" />
+        app:layout_constraintTop_toTopOf="@id/blackView"
+        app:layout_constraintVertical_bias="0.401" />
 
     <View
         android:id="@+id/innerBoxView"
@@ -119,5 +119,135 @@
         app:layout_constraintHorizontal_bias="0.90"
         app:layout_constraintRight_toRightOf="@id/innerBoxView"
         />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 201"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toTopOf="@id/profileActivities"
+        app:layout_constraintVertical_bias="0.253" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 202"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 203"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 301"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 302"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.385" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Room 303"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Library"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Resto Bar"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab"
+        android:text="Comlab"
+        android:textColor="#1AADFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.779" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

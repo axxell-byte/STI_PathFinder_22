@@ -24,7 +24,9 @@
         android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintRight_toRightOf="@id/topView"
+        app:layout_constraintLeft_toLeftOf="@id/topView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

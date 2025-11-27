@@ -45,11 +45,79 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Username"
+        android:fontFamily="@font/robotoslab"
         android:textColor="@color/black"
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintLeft_toRightOf="@id/profileImageView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/blackView"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/profileActivities"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:background="@drawable/rounded_box_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/blackView" />
+
+    <View
+        android:id="@+id/innerBoxView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/rounded_box"
+        app:layout_constraintBottom_toBottomOf="@id/profileActivities"
+        app:layout_constraintHorizontal_bias="5"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="@id/profileActivities"
+        app:layout_constraintRight_toRightOf="@id/profileActivities"
+        app:layout_constraintTop_toTopOf="@id/profileActivities" />
+
+    <TextView
+        android:id="@+id/roomwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/innerBoxView"
+        app:layout_constraintTop_toTopOf="@id/innerBoxView"
+        app:layout_constraintLeft_toLeftOf="@id/innerBoxView"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintRight_toRightOf="@id/innerBoxView"
+    />
+
+    <TextView
+        android:id="@+id/statuswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/innerBoxView"
+        app:layout_constraintTop_toTopOf="@id/innerBoxView"
+        app:layout_constraintLeft_toLeftOf="@id/innerBoxView"
+        app:layout_constraintHorizontal_bias="0.90"
+        app:layout_constraintRight_toRightOf="@id/innerBoxView"
+        />
+
+    <TextView
+        android:id="@+id/statuswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/innerBoxView"
+        app:layout_constraintTop_toTopOf="@id/innerBoxView"
+        app:layout_constraintLeft_toLeftOf="@id/innerBoxView"
+        app:layout_constraintHorizontal_bias="0.90"
+        app:layout_constraintRight_toRightOf="@id/innerBoxView"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

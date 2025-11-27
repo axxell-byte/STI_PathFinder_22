@@ -1,29 +1,29 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:2:1-11:12
+ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:2:1-11:12
 	package
-		INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml
+		INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:3:5-51
 	xmlns:android
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:5:5-43
-INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:5:5-43
-INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:5:5-43
+ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:5-43
+INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:5-43
+INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:5-43
 	android:targetSdkVersion
-		INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml
+		INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:5:15-41
-		INJECTED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:5:15-41
+		INJECTED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml
 uses-feature#0x00020000
-ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:6:5-77
+ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:6:5-77
 	android:glEsVersion
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:6:19-51
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:6:19-51
 	android:required
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:6:52-75
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:6:52-75
 application
-ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:8:5-10:19
+ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:8:5-10:19
 	tools:node
-		ADDED from C:\Users\Administrator\AndroidStudioProjects\STIPathFinder2\godot\AndroidManifest.xml:8:18-36
+		ADDED from C:\Users\PC2\StudioProjects\STI_PathFinder_22\godot\AndroidManifest.xml:8:18-36
